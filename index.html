@@ -163,10 +163,18 @@
                 <div id="product-slider" class="w-full h-full relative">
                     
                     <!-- Изображение 1 -->
-                    <!-- Изображение 1 -->
-<div class="slider-item absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
-    <img src="gs1.jpeg" alt="Котлетное мясо 70/30" class="w-full h-full object-cover">
-
+                    <div class="slider-item absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
+                        <img src="gs1.jpeg" alt="Котлетное мясо 70/30" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                            <span class="font-bold block">Котлетное мясо 70/30</span>
+                            <span class="opacity-80">Внешний вид сырья</span>
+                        </div>
+                        <button onclick="triggerZoom(0)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                            </svg>
+                        </button>
+                    </div>
 
                     <!-- Изображение 2 -->
                     <div class="slider-item absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
