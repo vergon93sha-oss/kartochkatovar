@@ -144,77 +144,98 @@
     <section id="tab-catalog" class="scroll-mt-24 block space-y-8 animate-fade-in">
         
         <!-- Хлебные крошки и быстрые переходы -->
-<div class="flex flex-wrap items-center gap-2 text-xs text-slate-450">
-    <span>Продукция</span>
-    <span>/</span>
-    <span class="text-sky-600 font-semibold">Котлетное мясо 70/30 (говядина)</span>
-</div>
+        <div class="flex flex-wrap items-center gap-2 text-xs text-slate-450">
+            <span>Продукция</span>
+            <span>/</span>
+            <span class="text-sky-600 font-semibold">Котлетное мясо 70/30 (говядина)</span>
+        </div>
 
-<!-- КАРТОЧКА ТОВАРА СВЕРХПРЕМИУМ -->
-<div class="bg-transparent backdrop-blur-xl border border-white/60 rounded-3xl p-6 lg:p-10 shadow-xl space-y-10">
-    
-    <!-- Основной блок: Слайдер и заглавная информация -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-        
-        <!-- Левая колонка: Интерактивный Слайдер -->
-        <div class="lg:col-span-6 space-y-4">
-            <div class="relative rounded-2xl overflow-hidden shadow-md aspect-[4/3] bg-sky-50 group border border-sky-100/50">
-                <!-- Слайды изображений -->
-                <div id="product-slider" class="w-full h-full relative">
-                    
+        <!-- КАРТОЧКА ТОВАРА СВЕРХПРЕМИУМ -->
+        <div class="bg-transparent backdrop-blur-xl border border-white/60 rounded-3xl p-6 lg:p-10 shadow-xl space-y-10">
+            
+            <!-- Основной block: Слайдер и заглавная информация -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+                
+                <!-- Левая колонка: Интерактивный Слайдер -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="relative rounded-2xl overflow-hidden shadow-md aspect-[4/3] bg-sky-50 group border border-sky-100/50">
+                        
+                        <!-- Слайды изображений -->
+                        <div id="product-slider" class="w-full h-full relative">
+                            
+                            <!-- Изображение 1 (Добавлено) -->
+                            <div class="slider-item absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
+                                <img src="gs1.jpeg" alt="Основное фото товара" class="w-full h-full object-cover">
+                                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                                    <span class="font-bold block">Котлетное мясо говяжье</span>
+                                    <span class="opacity-80">70/30 ГОСТ</span>
+                                </div>
+                                <button onclick="triggerZoom(0)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                                </button>
+                            </div>
 
-                    <!-- Изображение 2 -->
-                    <div class="slider-item absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
-                        <img src="gs2.jpeg" alt="Гофрокороб 25 кг" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
-                            <span class="font-bold block">Блок говяжего котлетного мяса</span>
-                            <span class="opacity-80"> 70/30 в полиэтиленовом вкладыше</span>
+                            <!-- Изображение 2 -->
+                            <div class="slider-item absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
+                                <img src="gs2.jpeg" alt="Гофрокороб 25 кг" class="w-full h-full object-cover">
+                                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                                    <span class="font-bold block">Блок говяжьего котлетного мяса</span>
+                                    <span class="opacity-80">70/30 в полиэтиленовом вкладыше</span>
+                                </div>
+                                <button onclick="triggerZoom(1)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                                </button>
+                            </div>
+
+                            <!-- Изображение 3 -->
+                            <div class="slider-item absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
+                                <img src="gs3.jpeg" alt="Калибровка & Разрез" class="w-full h-full object-cover">
+                                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                                    <span class="font-bold block">Паллета</span>
+                                    <span class="opacity-80">говядины в стрейч-пленке</span>
+                                </div>
+                                <button onclick="triggerZoom(2)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                                </button>
+                            </div>
+
+                            <!-- Изображение 4 -->
+                            <div class="slider-item absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
+                                <img src="gs4.jpeg" alt="Дополнительное фото" class="w-full h-full object-cover">
+                                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                                    <span class="font-bold block">Распил замороженного</span>
+                                    <span class="opacity-80">мясного блока</span>
+                                </div>
+                                <button onclick="triggerZoom(3)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                                </button>
+                            </div>
+                           
                         </div>
-                        <button onclick="triggerZoom(1)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
-                        </button>
-                    </div>
 
-                    <!-- Изображение 3 -->
-                    <div class="slider-item absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
-                        <img src="gs3.jpeg" alt="Калибровка & Разрез" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
-                            <span class="font-bold block">Паллета</span>
-                            <span class="opacity-80">говядины в стрейч-пленке</span>
-                        </div>
-                        <button onclick="triggerZoom(2)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
-                        </button>
-                    </div>
-
-                    <!-- Изображение 4 -->
-                    <div class="slider-item absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col items-center justify-center p-0">
-                        <img src="gs4.jpeg" alt="Дополнительное фото" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
-                            <span class="font-bold block">Распил замороженного</span>
-                            <span class="opacity-80">мясного блока</span>
-                        </div>
-                        <button onclick="triggerZoom(3)" class="absolute bottom-4 right-4 bg-white/80 p-2 rounded-full hover:bg-sky-400 text-slate-600 hover:text-white transition-all shadow">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
-                        </button>
-                    </div>
-                   
-                </div>
-
-
-
-                        <!-- Стрелки -->
+                        <!-- Стрелки навигации слайдера -->
                         <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-slate-800 p-2 rounded-full transition-all">&larr;</button>
                         <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-slate-800 p-2 rounded-full transition-all">&rarr;</button>
                     </div>
 
-                    <!-- Миниатюры под слайдером (4 штуки для ручного выбора) -->
+                    <!-- Исправленная сетка миниатюр под слайдером (4 колонки для 4 фото) -->
                     <div class="grid grid-cols-4 gap-2">
-                        <button onclick="setSlide(1)" class="thumb-btn border border-sky-100 rounded-lg p-2 bg-white/30 text-xs font-semibold text-center hover:bg-white/50">Фото 1</button>
-                        <button onclick="setSlide(2)" class="thumb-btn border border-sky-100 rounded-lg p-2 bg-white/30 text-xs font-semibold text-center hover:bg-white/50">Фото 2</button>
-                        <button onclick="setSlide(3)" class="thumb-btn border border-sky-100 rounded-lg p-2 bg-white/30 text-xs font-semibold text-center hover:bg-white/50">Фото 3</button>
+                        <button onclick="setSlide(0)" class="thumb-btn border border-sky-100 rounded-lg p-2 bg-white/30 text-xs font-semibold text-center hover:bg-white/50">Фото 1</button>
+                        <button onclick="setSlide(1)" class="thumb-btn border border-sky-100 rounded-lg p-2 bg-white/30 text-xs font-semibold text-center hover:bg-white/50">Фото 2</button>
+                        <button onclick="setSlide(2)" class="thumb-btn border border-sky-100 rounded-lg p-2 bg-white/30 text-xs font-semibold text-center hover:bg-white/50">Фото 3</button>
+                        <button onclick="setSlide(3)" class="thumb-btn border border-sky-100 rounded-lg p-2 bg-white/30 text-xs font-semibold text-center hover:bg-white/50">Фото 4</button>
                     </div>
                 </div>
+
+                <!-- Правая колонка с описанием (оставьте ваш текущий код здесь) -->
+                <div class="lg:col-span-6">
+                    <!-- Содержимое текстового блока карточки -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
 
                 <!-- Правая колонка: Продукт, Краткие параметры, Быстрый заказ -->
                 <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
