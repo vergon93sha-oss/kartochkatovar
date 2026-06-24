@@ -748,35 +748,37 @@
         title.innerText = productImages[currentSlideIndex].alt;
         holder.innerHTML = `<img src="${productImages[currentSlideIndex].src}" alt="Фото товара" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl border border-white/10" />`;
       } 
-      else if (type.startsWith('dec')) {
-        // Заглушка официальных деклараций
-        let decTitle = 'Декларация качества';
-        if (type === 'dec1') decTitle = 'Декларация о соответствии (Лист 1)';
-        if (type === 'dec2') decTitle = 'Декларация о соответствии (Лист 2)';
-        if (type === 'dec3') decTitle = 'Сертификат качества / Протокол испытаний';
+        else if (type.startsWith('dec')) {
+    // 1. Определяем правильный заголовок и имя файла картинки в зависимости от типа
+    let decTitle = 'Декларация о соответствии';
+    let imgSrc = 'dec1.jpeg'; // Название файла по умолчанию
 
-        title.innerText = decTitle;
-        holder.innerHTML = `
-          <div class="bg-white border-2 border-dashed border-[#38BDF8]/40 rounded-3xl p-8 md:p-12 text-center max-w-md mx-auto shadow-2xl flex flex-col items-center gap-4 text-slate-800">
-            <div class="w-16 h-16 rounded-full bg-sky-100 flex items-center justify-center text-[#0284C7]">
-              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-black">${decTitle}</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">
-              Здесь будет находиться официальный скан Декларации соответствия ТС ЕАС на Котлетное мясо. Чтобы заменить этот блок на настоящее изображение, укажите ссылку на ваш файл в коде страницы.
-            </p>
-            <div class="w-full border-t border-slate-100 pt-4 flex flex-col gap-1 text-[10px] text-left text-slate-400 font-mono">
-              <p>• Статус: Действителен</p>
-              <p>• Орган регистрации: Федеральная служба по аккредитации</p>
-            </div>
-            <button onclick="closeLightbox()" class="px-6 py-2 rounded-xl text-white font-bold text-xs" style="background-color: #0284C7">
-              Закрыть документ
-            </button>
-          </div>
-        `;
-      } 
+    if (type === 'dec1') {
+      decTitle = 'Декларация о соответствии (Лист 1)';
+      imgSrc = 'dec1.jpeg'; // Имя файла для первого листа
+    } else if (type === 'dec2') {
+      decTitle = 'Декларация о соответствии (Лист 2)';
+      imgSrc = 'dec2.jpeg'; // Имя файла для второго листа
+    } else if (type === 'dec3') {
+      decTitle = 'Декларация о соответствии (Лист 3)';
+      imgSrc = 'dec3.jpeg'; // Имя файла для третьего листа
+    }
+
+    // 2. Устанавливаем заголовок
+    title.innerText = decTitle;
+
+    // 3. Выводим саму картинку декларации
+    holder.innerHTML = `
+      <div class="w-full flex justify-center p-1 md:p-4">
+        <img 
+          src="${imgSrc}" 
+          alt="${decTitle}" 
+          class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl block mx-auto" 
+        />
+      </div>
+    `;
+  }
+
              else if (type === 'label') {
     // 1. Находим элементы лайтбокса по их точным ID из HTML
     const lightboxTitle = document.getElementById('lightbox-title');
