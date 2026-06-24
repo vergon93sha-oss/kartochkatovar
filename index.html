@@ -44,9 +44,34 @@
     .fade-slide {
       transition: opacity 0.5s ease-in-out;
     }
+    /* Анимация для полета облаков */
+  @keyframes float {
+    0% { transform: translateX(-200px); }
+    100% { transform: translateX(110vw); }
+  }
+
+  @keyframes soft-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .animate-soft-pulse {
+    animation: soft-pulse 3s ease-in-out infinite;
+  }
   </style>
 </head>
 <body class="bg-[#F0F9FF] text-[#0F172A] font-sans min-h-screen p-4 md:p-8">
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <img src="cloud1.png" class="absolute top-[5%] left-[-20%] w-56 opacity-30 animate-[float_60s_linear_infinite]" />
+    <img src="cloud2.png" class="absolute top-[15%] left-[-40%] w-40 opacity-20 animate-[float_50s_linear_infinite_10s]" />
+    <img src="cloud3.png" class="absolute top-[30%] left-[-30%] w-48 opacity-35 animate-[float_45s_linear_infinite_5s]" />
+    <img src="cloud1.png" class="absolute top-[45%] left-[-50%] w-36 opacity-25 animate-[float_55s_linear_infinite_15s]" />
+    <img src="cloud2.png" class="absolute top-[60%] left-[-20%] w-44 opacity-30 animate-[float_40s_linear_infinite_8s]" />
+    <img src="cloud3.png" class="absolute top-[75%] left-[-35%] w-52 opacity-20 animate-[float_48s_linear_infinite_3s]" />
+    <img src="cloud1.png" class="absolute top-[85%] left-[-15%] w-32 opacity-35 animate-[float_42s_linear_infinite_20s]" />
+  </div>
+
+  <div class="absolute top-0 left-0 right-0 h-[450px] bg-gradient-to-b from-sky-400 via-sky-300 to-transparent opacity-30 pointer-events-none"></div>
 
   <!-- ШАПКА БРЕНДА -->
   <header class="max-w-6xl mx-auto mb-8 bg-white/70 backdrop-blur-md rounded-2xl p-6 border border-[#38BDF8]/20 shadow-sm flex flex-col md:flex-row justify-between items-center gap-4">
