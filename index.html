@@ -194,20 +194,24 @@
           </p>
         </div>
 
-        <!-- Блок цены -->
-        <div class="flex items-baseline gap-4 py-4 px-5 rounded-2xl bg-white/80 border border-[#38BDF8]/15 shadow-sm">
-          <div>
+             <!-- Блок цены -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 py-4 px-5 rounded-2xl bg-white/80 border border-[#38BDF8]/15 shadow-sm">
+          <!-- Левая колонка: Цена -->
+          <div class="flex flex-col justify-center">
             <span class="text-xs font-bold uppercase tracking-wider block mb-1 text-[#475569]">Оптовая цена за кг</span>
             <div class="flex items-baseline gap-2">
-              <span class="text-4xl font-black tracking-tight text-[#0284C7]">368 ₽</span>
-              <span class="text-xs font-bold text-[#475569]">с НДС 10%</span>
+              <!-- Анимация пульсации animate-pulse добавлена на цену -->
+              <span class="text-4xl font-black tracking-tight text-[#0284C7] animate-pulse">368 ₽</span>
+              <span class="text-xs font-bold text-[#475569] whitespace-nowrap">с НДС 10%</span>
             </div>
           </div>
-          <div class="ml-auto border-l border-slate-200 pl-4">
-            <span class="text-xs font-semibold block text-[#475569]">Минимальный заказ</span>
+          <!-- Правая колонка: Минимальный заказ -->
+          <div class="sm:border-l sm:border-slate-200 sm:pl-6 pt-3 sm:pt-0 border-t border-slate-100 sm:border-t-0 flex flex-col justify-center">
+            <span class="text-xs font-bold uppercase tracking-wider block mb-1 text-[#475569]">Минимальный заказ</span>
             <span class="text-sm font-bold text-[#0F172A]">От 1 европаллеты (до 800 кг)</span>
           </div>
         </div>
+
 
         <!-- Краткое описание состава -->
         <div>
