@@ -777,21 +777,28 @@
           </div>
         `;
       } 
-        else if (type === 'label') {
-    // Меняем заголовок модального окна (если он используется)
+          else if (type === 'label') {
+    // Устанавливаем заголовок вверху окна
     title.innerText = 'Маркировка товара (Заводская этикетка)';
     
-    // Вставляем саму картинку lulu.jpeg вместо старого текстового макета
+    // Перезаписываем содержимое окна чистой адаптивной картинкой
     holder.innerHTML = `
-      <div class="flex items-center justify-center max-w-4xl mx-auto p-2">
-        <img 
-          src="lulu.jpeg" 
-          alt="Маркировка товара" 
-          class="w-full h-auto max-h-[75vh] object-contain rounded-2xl shadow-lg"
-        />
+      <div class="w-full flex flex-col items-center justify-center p-1 md:p-4">
+        <div class="relative w-full max-w-2xl bg-white p-2 rounded-2xl shadow-xl overflow-hidden">
+          <img 
+            src="lulu.jpeg" 
+            alt="Маркировка товара" 
+            class="w-full h-auto max-h-[65vh] md:max-h-[75vh] object-contain block mx-auto cursor-zoom-out"
+            onclick="closeLightbox()"
+          />
+        </div>
+        <p class="text-white/70 text-xs mt-4 text-center bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
+          Нажмите на картинку или в любом месте, чтобы закрыть
+        </p>
       </div>
     `;
   }
+
 
     function closeLightbox() {
       document.getElementById('lightbox').classList.add('hidden');
