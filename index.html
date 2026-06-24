@@ -76,13 +76,11 @@
 <!-- ШАПКА БРЕНДА -->
 <header class="max-w-6xl mx-auto mb-8 bg-transparent rounded-2xl p-6 border border-[#38BDF8]/20 shadow-sm flex flex-col md:flex-row justify-between items-center gap-4 relative overflow-hidden">
   
-  <!-- ПАРЯЩИЙ СИЛУЭТ-ПАТТЕРН НА ЗАДНЕМ ПЛАНЕ ШАПКИ -->
-  <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.08] flex items-center justify-center md:justify-end md:pr-48 select-none">
-    <img 
-     src="Gemini_Generated_Image_53e8r653e8r653e8-Photoroom.png"
-      alt="Фирменный паттерн коров" 
-      class="h-10 md:h-12 object-contain animate-header-float" 
-    />
+   <!-- ЦЕПОЧКА ИЗ ТРЕХ КОРОВ НА ЗАДНЕМ ПЛАНЕ ШАПКИ -->
+  <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-60 flex items-center justify-around px-8 select-none">
+    <img src="Gemini_Generated_Image_53e8r653e8r653e8-Photoroom.png" alt="Паттерн коров 1" class="h-8 object-contain animate-header-float" />
+    <img src="Gemini_Generated_Image_53e8r653e8r653e8-Photoroom.png" alt="Паттерн коров 2" class="h-8 object-contain animate-header-float hidden md:block" />
+    <img src="Gemini_Generated_Image_53e8r653e8r653e8-Photoroom.png" alt="Паттерн коров 3" class="h-8 object-contain animate-header-float hidden lg:block" />
   </div>
 
   <div class="flex items-center gap-4 z-10">
@@ -103,15 +101,15 @@
   </div>
 </header>
 
-<!-- СТИЛИ ДЛЯ ПЛАВНОГО ДВИЖЕНИЯ В ШАПКЕ -->
+<!-- СТИЛИ ДЛЯ ПЛАВНОГО ДВИЖЕНИЯ В ШАПКЕ (ОДИН ЧИСТЫЙ БЛОК) -->
 <style>
   @keyframes headerFloat {
     0% { transform: translateY(0px) translateX(0px); }
-    50% { transform: translateY(-3px) translateX(-2px); }
+    50% { transform: translateY(-4px) translateX(-2px); }
     100% { transform: translateY(0px) translateX(0px); }
   }
   .animate-header-float {
-    animation: headerFloat 6s ease-in-out infinite;
+    animation: headerFloat 5s ease-in-out infinite;
   }
 </style>
 
