@@ -777,26 +777,28 @@
           </div>
         `;
       } 
-           else if (type === 'label') {
-    // Шаблон этикетки (твоя картинка lulu.jpeg)
-    title.innerText = 'Маркировка товара (Заводская этикетка)';
-    holder.innerHTML = `
-      <div class="w-full flex flex-col items-center justify-center p-1 md:p-4">
-        <div class="relative w-full max-w-2xl bg-white p-2 rounded-2xl shadow-xl overflow-hidden">
-          <img 
-            src="lulu.jpeg" 
-            alt="Маркировка товара" 
-            class="w-full h-auto max-h-[65vh] md:max-h-[75vh] object-contain block mx-auto cursor-zoom-out"
-            onclick="closeLightbox()"
-          />
-        </div>
-        <p class="text-white/70 text-xs mt-4 text-center bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
-          Нажмите на картинку или в любом месте, чтобы закрыть
-        </p>
-      </div>
-    `;
+             else if (type === 'label') {
+    // 1. Находим элементы лайтбокса по их точным ID из HTML
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const contentHolder = document.getElementById('lightbox-content-holder');
+    
+    // 2. Устанавливаем текст для нижнего заголовка
+    if (lightboxTitle) {
+      lightboxTitle.innerText = 'Маркировка товара (Заводская этикетка)';
+    }
+    
+    // 3. Вставляем чистую адаптивную картинку в правильный контейнер
+    if (contentHolder) {
+      contentHolder.innerHTML = `
+        <img 
+          src="lulu.jpeg" 
+          alt="Маркировка товара" 
+          class="max-w-full max-h-[70vh] object-contain rounded-xl shadow-2xl block mx-auto"
+        />
+      `;
+    }
   }
-} // ВОТ ЭТА СКОБКА ЗАКРЫВАЕТ ФУНКЦИЮ openLightbox (ОНА ОЧЕНЬ ВАЖНА!)
+} // Эта скобка закрывает функцию openLightbox
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.add('hidden');
