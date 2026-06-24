@@ -261,7 +261,7 @@
 
       </div>
     </div>
-            <!-- ПАРЯЩИЕ БЕЛЫЕ СИЛУЭТЫ (ИСПРАВЛЕННЫЙ ВАРИАНТ) -->
+              <!-- ПАРЯЩИЕ БЕЛЫЕ СИЛУЭТЫ (ЖЕЛЕЗОБЕТОННЫЙ ВАРИАНТ ДЛЯ CHROME) -->
   <div class="absolute bottom-4 right-4 w-full max-w-[420px] h-[280px] pointer-events-none z-10 overflow-hidden hidden lg:flex items-center justify-center">
     <video 
       autoplay 
@@ -269,24 +269,13 @@
       muted 
       playsinline 
       class="w-full h-full object-contain block mx-auto opacity-75"
-      style="mix-blend-mode: screen;"
+      style="filter: brightness(1) contract(1); mix-blend-mode: screen; background-color: transparent;"
     >
       <source src="siluety.mp4" type="video/mp4">
     </video>
   </div>
 
-</main> <!-- ВОТ ЭТОТ ТЕГ СПАСЕТ НАШУ ВЕРСТКУ И РАЗЛЕПИТ ВСЕ БЛОКИ! -->
-
-  <!-- БЛОК С ВИДЕО -->
-  <section class="max-w-6xl mx-auto mb-6 bg-transparent rounded-3xl p-6 border border-[#38BDF8]/20 shadow-md">
-    <h4 class="text-xs font-bold uppercase tracking-wider mb-3 text-slate-500">Видеообзор продукта</h4>
-    <div class="w-full max-w-2xl mx-auto overflow-hidden rounded-2xl border border-slate-100 shadow-inner">
-      <video class="w-full h-auto object-cover" controls preload="metadata">
-        <source src="st1.mp4" type="video/mp4">
-        Ваш браузер не поддерживает воспроизведение видео.
-      </video>
-    </div>
-  </section>
+</main>
 
   <!-- ТЕХНИЧЕСКАЯ КАРТА (Вкладки) -->
   <section class="max-w-6xl mx-auto mb-12 bg-white rounded-3xl p-6 md:p-8 border border-[#38BDF8]/20 shadow-md">
