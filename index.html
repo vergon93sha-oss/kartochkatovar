@@ -467,7 +467,7 @@
 <section class="max-w-6xl mx-auto mb-12 px-4 md:px-0">
   <div class="mb-6">
     <h3 class="text-2xl font-black text-[#0F172A] uppercase">Маркировка товара (Этикетка)</h3>
-    <p class="text-xs text-[#475569]">Пример этикетки на коробке с котлетным мясом. Нажмите на изображение для просмотра во весь экран.</p>
+    <p class="text-xs text-[#475569]"> Нажмите на изображение для просмотра во весь экран.</p>
   </div>
 
   <!-- Контейнер с картинкой этикетки -->
@@ -777,43 +777,21 @@
           </div>
         `;
       } 
-      else if (type === 'label') {
-        // Шаблон этикетки по ГОСТу
-        title.innerText = 'Маркировка товара (Заводская этикетка)';
-        holder.innerHTML = `
-          <div class="bg-white border-2 border-dashed border-[#38BDF8]/40 rounded-3xl p-6 md:p-10 text-center max-w-lg mx-auto shadow-2xl flex flex-col gap-4 text-slate-800">
-            <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-              <h3 class="text-lg font-black text-slate-800">Маркировочный ярлык (Шаблон ГОСТ)</h3>
-              <span class="text-[9px] font-bold text-white bg-[#0284C7] px-2 py-0.5 rounded-full uppercase font-sans">Образец</span>
-            </div>
-            
-            <!-- Макет этикетки -->
-            <div class="border border-slate-200 p-4 rounded-xl text-left bg-slate-50 font-mono text-[10px] text-slate-700 space-y-2">
-              <p class="font-bold text-center text-xs border-b border-slate-200 pb-1 uppercase">ПОЛУФАБРИКАТ МЯСНОЙ ИЗ ГОВЯДИНЫ ЗАМОРОЖЕННЫЙ</p>
-              <p><span class="font-bold">Категория:</span> Блок из жилованного мяса</p>
-              <p><span class="font-bold">Состав:</span> Говядина жилованная односортная (котлетное мясо 70/30)</p>
-              <p><span class="font-bold">Пищевая ценность (100г):</span> белков - не менее 19.2г; жиров - не более 20.0г.</p>
-              <p><span class="font-bold">Энергетическая ценность:</span> 254 ккал/1054 кДж</p>
-              <p><span class="font-bold">Срок годности:</span> 12 месяцев при температуре не выше минус 18°С</p>
-              <p><span class="font-bold">Производитель:</span> ООО "РУСЬ", Российская Федерация, Владимирская обл.</p>
-              <p><span class="font-bold">Масса нетто:</span> 25.0 кг. <span class="font-bold">Масса брутто:</span> 25.1 кг</p>
-              <div class="flex justify-between items-center pt-2 border-t border-slate-200 font-sans">
-                <span class="font-bold">EAC</span>
-                <span class="text-right text-xs tracking-widest font-bold font-mono">|||| | ||| |||| | |||</span>
-              </div>
-            </div>
-
-            <p class="text-xs text-slate-500 leading-relaxed">
-              Вы можете заменить данный демонстрационный образец этикетки на реальный скан-файл, загрузив изображение в код проекта.
-            </p>
-            
-            <button onclick="closeLightbox()" class="px-6 py-2 rounded-xl text-white font-bold text-xs self-center" style="background-color: #0284C7">
-              Вернуться назад
-            </button>
-          </div>
-        `;
-      }
-    }
+        else if (type === 'label') {
+    // Меняем заголовок модального окна (если он используется)
+    title.innerText = 'Маркировка товара (Заводская этикетка)';
+    
+    // Вставляем саму картинку lulu.jpeg вместо старого текстового макета
+    holder.innerHTML = `
+      <div class="flex items-center justify-center max-w-4xl mx-auto p-2">
+        <img 
+          src="lulu.jpeg" 
+          alt="Маркировка товара" 
+          class="w-full h-auto max-h-[75vh] object-contain rounded-2xl shadow-lg"
+        />
+      </div>
+    `;
+  }
 
     function closeLightbox() {
       document.getElementById('lightbox').classList.add('hidden');
