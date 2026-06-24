@@ -261,17 +261,18 @@
 
       </div>
     </div>
-      <!-- ПАРЯЩИЕ СИЛУЭТЫ В ПРАВОМ НИЖНЕМ УГЛУ ГЛАВНОГО ЭКРАНА -->
-  <div class="absolute bottom-0 right-0 w-full max-w-[420px] h-[280px] pointer-events-none z-0 overflow-hidden hidden lg:flex items-center justify-center">
+         <!-- ПАРЯЩИЕ СИЛУЭТЫ (ОБНОВЛЕННАЯ СВЯЗКА) -->
+  <div class="absolute bottom-4 right-4 w-full max-w-[420px] h-[280px] pointer-events-none z-10 overflow-hidden hidden lg:flex items-center justify-center">
     <video 
       autoplay 
       loop 
       muted 
       playsinline 
-      class="w-full h-full object-contain mix-blend-screen opacity-75"
+      class="w-full h-full object-contain mix-blend-screen opacity-90"
     >
+      <!-- Файл siluety.mov запускается во всех современных браузерах -->
       <source src="siluety.mov" type="video/quicktime">
-      <source src="siluety.mov" type="video/mp4; codecs='hvc1'">
+      <source src="siluety.mov" type="video/mp4">
     </video>
   </div>
 
