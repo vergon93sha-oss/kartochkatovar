@@ -85,13 +85,14 @@
     />
   </div>
 
-<div class="flex items-center justify-between gap-4 z-10 py-2 relative w-full">
-  <div class="flex flex-col gap-1">
+<div class="flex items-center justify-between gap-6 z-10 py-1.5 relative w-full">
+  <!-- ЛЕВАЯ ЧАСТЬ: Логотип, плашка «Производитель» и описание -->
+  <div class="flex flex-col gap-1.5">
     <!-- Строка с логотипом и плашкой -->
-    <div class="flex items-center gap-4">
-      <!-- Логотип: теперь управляем через ширину w-[120px] для сильного увеличения -->
+    <div class="flex items-center gap-3">
+      <!-- Логотип: w-[140px] сделает его еще крупнее и заметнее -->
       <img src="Снимок экрана 2026-06-28 в 17.19.03.png" alt="Логотип RUSSKY" 
-           class="w-[120px] h-auto object-contain block shrink-0" />
+           class="w-[140px] h-auto object-contain block shrink-0" />
 
       <!-- Плашка «Производитель» -->
       <span class="text-xs font-semibold px-2.5 py-1 rounded-full text-white bg-[#38BDF8] normal-case tracking-normal shrink-0">
@@ -100,9 +101,17 @@
     </div>
     
     <!-- Описание компании -->
-    <p class="text-xs font-medium text-[#475569] mt-1">
+    <p class="text-xs font-medium text-[#475569]">
       ООО "РУСЬ" • Высококачественные мясные полуфабрикаты
     </p>
+  </div>
+
+  <!-- ПРАВАЯ ЧАСТЬ: Компактная плашка в одну строку -->
+  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#0284c7]/20 bg-[#0284c7]/5 text-[#0284c7] text-xs font-semibold whitespace-nowrap shrink-0">
+    <!-- Маленькая зеленая точка -->
+    <span class="w-2 h-2 rounded-full bg-[#10B981] shrink-0"></span>
+    <!-- Текст строго в одну линию -->
+    <span>Прямые поставки со склада</span>
   </div>
 </div>
 
