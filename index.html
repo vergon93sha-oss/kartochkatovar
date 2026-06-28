@@ -85,23 +85,24 @@
     />
   </div>
 
-<div class="flex items-center gap-4 z-10">
+<div class="flex items-center gap-4 z-10 py-3">
   <div>
-    <!-- Убрали text-2xl, чтобы не зажимать логотип, и добавили items-center для идеального центрирования плашки -->
-    <div class="inline-flex items-center flex-wrap gap-4">
-      <!-- Логотип: задали внушительную высоту h-16 (64px) -->
-      <!-- Если захочется ЕЩЕ крупнее, можно поставить h-20 (80px) -->
+    <!-- inline-flex и items-center выстроят логотип и плашку «Производитель» ровно по одной линии -->
+    <div class="inline-flex items-center flex-wrap gap-3">
+      <!-- Логотип: выставляем высоту h-[56px] или h-[64px], чтобы буквы стали крупными -->
       <img src="logo.png" alt="Логотип RUSSKY" 
-           class="h-16 w-auto object-contain inline-block" />
+           class="h-[56px] w-auto object-contain inline-block" />
 
       <!-- Плашка «Производитель» -->
-      <span class="text-xs font-semibold px-2 py-0.5 rounded-full text-white bg-[#38BDF8] normal-case tracking-normal">
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full text-white bg-[#38BDF8] normal-case tracking-normal">
         Производитель
       </span>
     </div>
-    <p class="text-xs font-medium text-[#475569] mt-3">ООО "РУСЬ" • Высококачественные мясные полуфабрикаты</p>
+    <!-- Описание компании чуть ближе к крупному названию -->
+    <p class="text-xs font-medium text-[#475569] mt-1.5">ООО "РУСЬ" • Высококачественные мясные полуфабрикаты</p>
   </div>
 </div>
+
 
 
   <div class="flex items-center gap-2 bg-[#38BDF8]/10 px-4 py-2 rounded-xl border border-[#38BDF8]/20 z-10">
