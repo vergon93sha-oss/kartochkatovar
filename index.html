@@ -88,23 +88,19 @@
 <div class="flex items-center gap-4 z-10">
   <div>
     <h1 class="text-2xl font-black tracking-tight uppercase text-[#0F172A] inline-flex items-center flex-wrap">
-      <!-- Цельный логотип вместо старого текста и отдельной птички -->
-      <!-- Высота h-[1.5em] сделает логотип крупным и читаемым, а mr-3 создаст красивый отступ до плашки -->
+      <!-- Цельный логотип: увеличили до фиксированной высоты h-10 (40px) -->
+      <!-- Если будет слишком крупно, замени h-10 на h-8 (32px) -->
       <img src="logo.png" alt="Логотип RUSSKY" 
-           class="h-[1.5em] w-auto object-contain inline-block mr-3" />
+           class="h-10 w-auto object-contain inline-block mr-4" />
 
-      <!-- Плашка «Производитель» -->
+      <!-- Плашка «Производитель»: добавили self-center или мягкое выравнивание, если нужно -->
       <span class="text-xs font-semibold px-2 py-0.5 rounded-full text-white bg-[#38BDF8] normal-case tracking-normal">
         Производитель
       </span>
     </h1>
-    <p class="text-xs font-medium text-[#475569] mt-1">ООО "РУСЬ" • Высококачественные мясные полуфабрикаты</p>
+    <p class="text-xs font-medium text-[#475569] mt-2">ООО "РУСЬ" • Высококачественные мясные полуфабрикаты</p>
   </div>
 </div>
-
-
-
-
 
   <div class="flex items-center gap-2 bg-[#38BDF8]/10 px-4 py-2 rounded-xl border border-[#38BDF8]/20 z-10">
     <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
