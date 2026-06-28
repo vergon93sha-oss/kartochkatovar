@@ -634,10 +634,12 @@
     <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
       <div class="flex justify-between items-center mb-4">
         <label for="volumeRange" class="text-sm font-bold text-[#1E293B]">Объем заказа:</label>
-        <span class="text-base font-extrabold text-[#38BDF8] bg-sky-50 px-3 py-1 rounded-xl">
-          <span id="palletCount">1</span> паллета (<span id="weightCount">800</span> кг)
+        <span class="text-base font-extrabold text-[#38BDF8] bg-sky-50 px-3 py-1 rounded-xl text-right block xs:inline-block">
+          <span id="palletCount">1</span> паллета 
+          <span class="block xs:inline text-xs xs:text-base font-semibold xs:font-extrabold opacity-90">(<span id="weightCount">800</span> кг)</span>
         </span>
       </div>
+
       
       <!-- Ползунок -->
       <input type="range" id="volumeRange" min="1" max="12" value="1" step="1" 
