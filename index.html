@@ -85,7 +85,7 @@
     />
   </div>
 
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 z-10 py-1.5 relative w-full">
+<div class="flex items-center justify-between gap-6 z-10 py-1.5 relative w-full">
   <!-- ЛЕВАЯ ЧАСТЬ: Логотип, плашка «Производитель» и описание -->
   <div class="flex flex-col gap-1.5">
     <!-- Строка с логотипом и плашкой -->
@@ -104,16 +104,17 @@
     <p class="text-xs font-medium text-[#475569]">
       ООО "РУСЬ" • Высококачественные мясные полуфабрикаты
     </p>
-  </div> <!-- ТУТ БЫЛ ПРОПУЩЕН ТЕГ, ИЗ-ЗА ЭТОГО ВСЁ ПОЕХАЛО -->
+  </div>
 
-  <!-- ПРАВАЯ ЧАСТЬ: Адаптивная плашка -->
-  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#0284c7]/20 bg-[#0284c7]/5 text-[#0284c7] text-xs font-semibold max-w-full md:max-w-none md:whitespace-nowrap shrink-0 md:shrink">
+  <!-- ПРАВАЯ ЧАСТЬ: Компактная плашка с мягким переносом на мобильных -->
+  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#0284c7]/20 bg-[#0284c7]/5 text-[#0284c7] text-xs font-semibold md:whitespace-nowrap min-w-0 shrink">
     <!-- Маленькая зеленая точка -->
-    <span class="w-2 h-2 rounded-full bg-[#10B981] shrink-0 self-start mt-1 md:self-center md:mt-0"></span>
-    <!-- Текст: на мобильных переносится, на ПК строго в одну линию -->
-    <span class="break-words md:white-space-nowrap">Прямые поставки со склада, натуральное и доступное каждому!</span>
+    <span class="w-2 h-2 rounded-full bg-[#10B981] shrink-0"></span>
+    <!-- Текст: переносится на мобильных, в одну строку на ПК -->
+    <span class="break-words md:truncate">Прямые поставки со склада, натуральное и доступное каждому!</span>
   </div>
 </div>
+
 
 <!-- СТИЛИ ДЛЯ ПЛАВНОГО ДВИЖЕНИЯ В ШАПКЕ -->
 <style>
