@@ -106,15 +106,14 @@
     </p>
   </div>
 
-  <!-- ПРАВАЯ ЧАСТЬ: Компактная плашка в одну строку -->
-  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#0284c7]/20 bg-[#0284c7]/5 text-[#0284c7] text-xs font-semibold whitespace-nowrap shrink-0">
-    <!-- Маленькая зеленая точка -->
-    <span class="w-2 h-2 rounded-full bg-[#10B981] shrink-0"></span>
-    <!-- Текст строго в одну линию -->
-    <span>Прямые поставки со склада, натуральное и доступное каждому!</span>
-  </div>
+<!-- ПРАВАЯ ЧАСТЬ: Адаптивная плашка -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#0284c7]/20 bg-[#0284c7]/5 text-[#0284c7] text-xs font-semibold md:whitespace-nowrap w-full md:w-auto">
+  <!-- Маленькая зеленая точка (всегда сверху-слева при переносе текста) -->
+  <span class="w-2 h-2 rounded-full bg-[#10B981] shrink-0 self-start mt-1 md:self-center md:mt-0"></span>
+  <!-- Текст: на мобильных переносится, на ПК строго в одну линию -->
+  <span class="break-words">Прямые поставки со склада, натуральное и доступное каждому!</span>
 </div>
-</header>
+
 
 <!-- СТИЛИ ДЛЯ ПЛАВНОГО ДВИЖЕНИЯ В ШАПКЕ -->
 <style>
