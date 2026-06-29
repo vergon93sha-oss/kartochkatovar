@@ -211,25 +211,27 @@
     </div>
 
     <!-- ПРАВАЯ КОЛОНКА: Описание, Цена, Состав (7 колонок) -->
-    <div class="lg:col-span-7 flex flex-col justify-between gap-6">
-      
-      <div class="bg-white/40 border border-[#38BDF8]/20 rounded-3xl p-6 md:p-8 flex flex-col gap-4">
-        <div>
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md text-white bg-[#0284C7]">
-              Говядина замороженная
-            </span>
-            <span class="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-emerald-500/15 text-emerald-700 border border-emerald-500/20">
-              Без химических добавок E
-            </span>
-          </div>
-          <h2 class="text-3xl md:text-4xl font-black tracking-tight text-[#0F172A]">
-            Котлетное мясо 70/30
-          </h2>
-          <p class="text-sm mt-1 font-medium text-[#475569]">
-            Бренд: <span class="font-bold text-[#0F172A]">RUSSKY</span> | Страна производства: РФ ПОЛУФАБРИКАТ НАТУРАЛЬНЫЙ КАТЕГОРИИ Б.
-          </p>
-        </div>
+<div class="lg:col-span-7 flex flex-col justify-between gap-6">
+  
+  <div class="bg-white/40 border border-[#38BDF8]/20 rounded-3xl p-6 md:p-8 flex flex-col gap-4">
+    <div>
+      <div class="flex flex-wrap gap-2 mb-2">
+        <span class="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md text-white bg-[#0284C7]">
+          Говядина замороженная
+        </span>
+        <span class="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-emerald-500/15 text-emerald-700 border border-emerald-500/20">
+          Без химических добавок E
+        </span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight text-[#0F172A]">
+        Котлетное мясо 70/30
+      </h2>
+      <!-- Изменено здесь: добавлен inline-flex для выравнивания картинки по центру текста -->
+      <p class="text-sm mt-1 font-medium text-[#475569] flex flex-wrap items-center gap-1.5">
+        Бренд: <img src="golublog.png" alt="RUSSKY" class="h-5 w-auto object-contain" /> | Страна производства: РФ ПОЛУФАБРИКАТ НАТУРАЛЬНЫЙ КАТЕГОРИИ Б.
+      </p>
+    </div>
+
 
              <!-- Блок цены -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 py-4 px-5 rounded-2xl bg-white/80 border border-[#38BDF8]/15 shadow-sm">
