@@ -596,10 +596,32 @@
 </section>
   <!-- БЛОК: СХЕМА РАБОТЫ -->
 <div class="w-full my-12 block relative clear-both">
+  
+  <!-- Стили для красивой пульсации (вставляем прямо сюда) -->
+  <style>
+    @keyframes beautiful-pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.04); /* Мягкое увеличение */
+        opacity: 0.75;         /* Плавное затухание */
+      }
+    }
+    .animate-pulse-custom {
+      display: inline-block;
+      animation: beautiful-pulse 2.5s infinite ease-in-out;
+    }
+  </style>
+
   <div class="text-center mb-8">
-    <h3 class="text-xl font-bold text-white">4 простых шага до поставки</h3>
+    <!-- Заменили text-white на text-black и добавили нашу анимацию -->
+    <h3 class="text-xl font-bold text-black animate-pulse-custom">4 простых шага до поставки</h3>
     <p class="text-xs text-slate-400 mt-1">Как строится процесс сотрудничества с мясокомбинатом ООО "РУСЬ"</p>
   </div>
+</div>
+
   
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     <!-- Шаг 1 -->
